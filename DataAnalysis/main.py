@@ -1,8 +1,10 @@
+# Import libraries
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv('data.csv')
+# Intake data as a data frame
+df = pd.read_csv('raw_rocket_data.ods')
 print(df.head())
 
 # Altitude vs. Time
@@ -13,7 +15,7 @@ plt.xlabel('Time (ms)')
 plt.ylabel('Altitude (m)')
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.savefig('Alt-vs-Time')
+plt.show('Alt-vs-Time')
 
 # Z-accel vs. Time
 plt.figure(figsize=(10, 6))
@@ -23,7 +25,7 @@ plt.xlabel('Time (ms)')
 plt.ylabel('Z-accel (m/s)')
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.savefig('Z-accel-vs-Time')
+plt.show('Z-accel-vs-Time')
 
 # Temperature vs. Altitude
 plt.figure(figsize=(10, 6))
@@ -33,7 +35,7 @@ plt.xlabel('Altitude')
 plt.ylabel('Temperature')
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.savefig('Temperature-vs-Altitude')
+plt.show('Temperature-vs-Altitude')
 
 # Pressure vs. Altitude
 plt.figure(figsize=(10, 6))
@@ -43,7 +45,7 @@ plt.xlabel('Altitude')
 plt.ylabel('Pressure')
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.savefig('Pressure-vs-Altitude')
+plt.show('Pressure-vs-Altitude')
 
 # Humidity vs. Altitude
 plt.figure(figsize=(10, 6))
@@ -53,8 +55,8 @@ plt.xlabel('Altitude')
 plt.ylabel('Humidity')
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.savefig('Humidity-vs-Altitude')
+plt.show('Humidity-vs-Altitude')
 
 # Pairplot
 sns.pairplot(df)
-plt.savefig('Pairplot')
+plt.show('Pairplot')
